@@ -52,7 +52,7 @@ GOOGLE_SECRET=<your_google_secret>
 
 ### Clone the Repository:
 ```bash
-git clone https://github.com/Advanced-Boy-Shreyash/Get-Me-A-Chai.git
+git clone https://github.com/yashkolte/GetMeAChai.git
 ```
 
 ---
