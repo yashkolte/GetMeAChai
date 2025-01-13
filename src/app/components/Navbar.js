@@ -17,7 +17,7 @@ const Navbar = () => {
   // }
 
   return (
-    <nav className="fixed top-0 w-full text-white flex justify-between items-center px-4 md:h-16 flex-col md:flex-row z-30 backdrop-blur-sm backdrop-filter">
+    <nav className="fixed top-0 w-full text-white flex justify-between items-center md:px-4 px-6 py-4 md:h-16 flex-row md:flex-row z-30 backdrop-blur-sm backdrop-filter">
       <Link
         href={"/"}
         className="logo font-bold flex items-center justify-center"

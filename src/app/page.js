@@ -165,26 +165,25 @@ export default function Home() {
               </span>
             </div>
             <p className="text-center">
-              A crowdfunding platform for creators. Get funded by your fans and
-              followers. Start now!
+            Welcome to the ultimate crowdfunding platform for creators. Let your fans and followers power your journey by contributing in meaningful ways.
             </p>
             <div className="z-10 flex flex-col gap-5 justify-center items-center">
               <div className="flex gap-5 justify-center items-center">
                 <Link href={"/login"}>
                   <ShinyButton className="border-x-2 border-white">
-                    Start Here
+                  Get Started
                   </ShinyButton>
                 </Link>
 
                 <Link href={"/read-more"}>
                   <ShinyButton className="border-x-2 border-white">
-                    Read More
+                  Learn More
                   </ShinyButton>
                 </Link>
               </div>
               <div className="flex flex-col justify-center items-center ">
                 <Link href={"/profiles"}>
-                  <RainbowButton>Fund Raisers</RainbowButton>
+                  <RainbowButton>Explore Fundraisers</RainbowButton>
                 </Link>
               </div>
             </div>
@@ -192,10 +191,10 @@ export default function Home() {
 
           <div className="text-white container mx-auto pb-32 pt-32 px-10">
             <h2 className="text-3xl font-bold text-center mb-14">
-              Your Fans can buy your a Chai
+            Why Choose "Buy Me a Chai"?
             </h2>
-            <div className="flex gap-5 justify-around">
-              <div className="item space-y-3 flex flex-col items-center justify-center">
+            <div className="flex md:flex-nowrap flex-wrap gap-5 justify-between w-[88%] m-auto">
+              <div className="w-1/3 flex flex-col items-center justify-center">
                 <MagicCard className="bg-black flex justify-center align-middle items-center flex-col p-10">
                   <img
                     src="icons/man.gif"
@@ -204,14 +203,14 @@ export default function Home() {
                     width={88}
                   />
                   <p className="font-bold text-center text-xl">
-                    Fans want to help
+                  Your Fans, Your Supporters
                   </p>
                   <p className="text-center text-sm">
-                    Your Fans are available for you to help you
+                  Your fans love your work and want to see you succeed. With "Buy Me a Chai," they can contribute and help you reach new heights.
                   </p>
                 </MagicCard>
               </div>
-              <div className="item space-y-3 flex flex-col items-center justify-center">
+              <div className="w-1/3 flex flex-col items-center justify-center">
                 <MagicCard className="bg-black flex justify-center align-middle items-center flex-col p-10">
                   <img
                     src="icons/coin.gif"
@@ -220,14 +219,14 @@ export default function Home() {
                     width={88}
                   />
                   <p className="font-bold text-center text-xl">
-                    Fans want to help
+                  Simple, Reliable, Impactful
                   </p>
                   <p className="text-center text-sm">
-                    Your Fans are available for you to help you
+                  Contributions are meaningful yet easy for your followers.
                   </p>
                 </MagicCard>
               </div>
-              <div className="item space-y-3 flex flex-col items-center justify-center">
+              <div className="w-1/3 flex flex-col items-center justify-center">
                 <MagicCard className="bg-black flex justify-center align-middle items-center flex-col p-10">
                   <img
                     src="icons/group.gif"
@@ -236,17 +235,17 @@ export default function Home() {
                     width={88}
                   />
                   <p className="font-bold text-center text-xl">
-                    Fans want to help
+                  Your Creativity, Their Chai
                   </p>
                   <p className="text-center text-sm">
-                    Your Fans are available for you to help you
+                  Every contribution helps you stay inspired and focused on creating. Start building your community-driven success story today!
                   </p>
                 </MagicCard>
               </div>
             </div>
           </div>
 
-            <div className="relative flex h-[500px] w-[80%] m-auto flex-col items-center justify-center overflow-hidden rounded-lg border border-gray-700 bg-black md:shadow-xl">
+            <div className="relative flex h-[500px] w-[88%] m-auto flex-col items-center justify-center overflow-hidden rounded-lg border border-gray-700 bg-black md:shadow-xl">
       <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-black-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
         GetMeAChai!
       </span>
