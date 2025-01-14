@@ -164,14 +164,9 @@ export default function Home() {
                 <img src="icons/tea.gif" width="88" alt="" />
               </span>
             </div>
-<<<<<<< HEAD
             <p className="text-center text-sm md:text-lg">
               A crowdfunding platform for creators. Get funded by your fans and
               followers. Start now!
-=======
-            <p className="text-center">
-            Welcome to the ultimate crowdfunding platform for creators. Let your fans and followers power your journey by contributing in meaningful ways.
->>>>>>> 016d0c568eb13f017d491369308d6e8f1a6e7cb8
             </p>
             <div className="z-10 flex flex-col gap-5 justify-center items-center">
               <div className="flex gap-5 justify-center items-center">
@@ -199,13 +194,8 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-center mb-14">
             Why Choose "Buy Me a Chai"?
             </h2>
-<<<<<<< HEAD
             <div className="flex flex-wrap gap-5 justify-around">
               <div className="item space-y-3 flex flex-col items-center justify-center">
-=======
-            <div className="flex md:flex-nowrap flex-wrap gap-5 justify-between w-[88%] m-auto">
-              <div className="w-1/3 flex flex-col items-center justify-center">
->>>>>>> 016d0c568eb13f017d491369308d6e8f1a6e7cb8
                 <MagicCard className="bg-black flex justify-center align-middle items-center flex-col p-10">
                   <img
                     src="icons/man.gif"
@@ -256,13 +246,8 @@ export default function Home() {
             </div>
           </div>
 
-<<<<<<< HEAD
             <div className="relative flex h-[500px] w-[80%] m-auto flex-col items-center justify-center overflow-hidden rounded-lg border border-gray-700 bg-black md:shadow-xl">
       <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-black-300 bg-clip-text text-center text-4xl md:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
-=======
-            <div className="relative flex h-[500px] w-[88%] m-auto flex-col items-center justify-center overflow-hidden rounded-lg border border-gray-700 bg-black md:shadow-xl">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-black-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
->>>>>>> 016d0c568eb13f017d491369308d6e8f1a6e7cb8
         GetMeAChai!
       </span>
  
