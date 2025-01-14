@@ -7,19 +7,12 @@ import { ToastContainer, toast, Slide } from 'react-toastify';
 const Login = () => {
     const { data: session } = useSession()
     const router = useRouter()
-    // document.title = "Login - Get Me A Chai"
 
     useEffect(() => {
         if (session) {
             router.push('/dashboard');
         }
     }, [session, router]);
-
-    // const { data: session } = useSession()
-    // if (session) {
-    //     const router = useRouter()
-    //     router.push('/dashboard')
-    // }
 
     return (
         <>

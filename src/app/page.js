@@ -6,7 +6,6 @@ import ShinyButton from "@/components/ui/ShinyButton";
 import { RainbowButton } from "@/components/ui/RainbowButton";
 import AnimatedGridPattern from "@/components/ui/AnimatedGridPattern";
 import { MagicCard } from "@/components/ui/MagicCard";
-import { BorderBeam } from "@/components/ui/BorderBeam";
 import { OrbitingCircles } from "@/components/ui/OrbitingCircles";
 
 const Icons = {
@@ -194,8 +193,8 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-center mb-14">
             Why Choose "Buy Me a Chai"?
             </h2>
-            <div className="flex flex-wrap gap-5 justify-around">
-              <div className="item space-y-3 flex flex-col items-center justify-center">
+            <div className="flex flex-wrap md:flex-nowrap gap-5 justify-around">
+              <div className="md:w-1/3 flex flex-col items-center justify-center">
                 <MagicCard className="bg-black flex justify-center align-middle items-center flex-col p-10">
                   <img
                     src="icons/man.gif"
@@ -211,7 +210,7 @@ export default function Home() {
                   </p>
                 </MagicCard>
               </div>
-              <div className="w-1/3 flex flex-col items-center justify-center">
+              <div className="md:w-1/3 flex flex-col items-center justify-center">
                 <MagicCard className="bg-black flex justify-center align-middle items-center flex-col p-10">
                   <img
                     src="icons/coin.gif"
@@ -227,7 +226,7 @@ export default function Home() {
                   </p>
                 </MagicCard>
               </div>
-              <div className="w-1/3 flex flex-col items-center justify-center">
+              <div className="md:w-1/3 flex flex-col items-center justify-center">
                 <MagicCard className="bg-black flex justify-center align-middle items-center flex-col p-10">
                   <img
                     src="icons/group.gif"

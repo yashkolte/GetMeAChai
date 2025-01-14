@@ -10,7 +10,6 @@ import ShineBorder from "@/components/ui/ShineBorder";
 import { RainbowButton } from "@/components/ui/RainbowButton";
 import InteractiveHoverButton from "@/components/ui/InteractiveHoverButton";
 
-
 const PaymentPage = ({ username }) => {
   document.title = "Support - " + username;
 
@@ -25,8 +24,6 @@ const PaymentPage = ({ username }) => {
       setLoading(false);
     }, 2000);
   }, []);
-
-  // console.log("first","currentUser",currentUser, "\nsetCurrentUser",setCurrentUser)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,7 +41,7 @@ const PaymentPage = ({ username }) => {
       // Ensure the user object is a plain object
       getUser = JSON.parse(JSON.stringify(getUser));
       setCurrentUser(getUser);
-  
+
       let dbPayments = await fetchPayments(username);
       // Ensure payments are plain objects
       dbPayments = dbPayments.map((payment) =>
@@ -55,7 +52,6 @@ const PaymentPage = ({ username }) => {
       console.error("Error getting Data:", error);
     }
   }, [username]);
-  
 
   useEffect(() => {
     getData();
@@ -121,9 +117,7 @@ const PaymentPage = ({ username }) => {
 
     try {
       const response = await initiate(amount, username, paymentform);
-      // console.log("response here",response)
       const orderId = response.id;
-      // console.log("orderId",orderId)
 
       const options = {
         key: currentUser?.razrpayId,
@@ -149,7 +143,6 @@ const PaymentPage = ({ username }) => {
             }
           );
           const result = await paymentResponse.json();
-          // console.log("result",result)
           if (result.success) {
             setPaymentform({});
             getPayments();
@@ -273,7 +266,10 @@ const PaymentPage = ({ username }) => {
 
           <div className="flex items-center justify-around">
             <div className="payment flex justify-center gap-5 w-[95%] mb-11 flex-col md:flex-row">
-              <ShineBorder className="supporters h-[60vh] w-full md:w-1/2 overflow-hidden rounded-lg px-10 text-white bg-black md:shadow-xl" color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}>
+              <ShineBorder
+                className="supporters h-[60vh] w-full md:w-1/2 overflow-hidden rounded-lg px-10 text-white bg-black md:shadow-xl"
+                color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+              >
                 <h2 className="text-2xl font-bold my-5">Top Supporters</h2>
                 <ul className="mx-5 text-lg max-h-72 overflow-y-scroll custom-scrollbar">
                   {payments.slice(0, 7).map((p, i) => {
@@ -309,18 +305,21 @@ const PaymentPage = ({ username }) => {
                 `}
               </style>
 
-              <ShineBorder className="cursor-pointer makePayment w-full h-[60vh] md:w-1/2 overflow-hidden rounded-lg px-10 text-white bg-black md:shadow-xl" color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}>
+              <ShineBorder
+                className="cursor-pointer makePayment w-full h-[60vh] md:w-1/2 overflow-hidden rounded-lg px-10 text-white bg-black md:shadow-xl"
+                color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+              >
                 <h2 className="text-2xl font-bold my-5">Make a Payment</h2>
                 <div className="flex w-[100%] gap-5 md:gap-2 flex-col z-20">
-                    <input
-                      onChange={handleChange}
-                      value={paymentform.name || ""}
-                      type="text"
-                      className="w-full p-3 rounded-lg bg-gray-900"
-                      name="name"
-                      placeholder="Enter Name"
-                      required
-                    />
+                  <input
+                    onChange={handleChange}
+                    value={paymentform.name || ""}
+                    type="text"
+                    className="w-full p-3 rounded-lg bg-gray-900"
+                    name="name"
+                    placeholder="Enter Name"
+                    required
+                  />
                   <input
                     onChange={handleChange}
                     value={paymentform.message || ""}
