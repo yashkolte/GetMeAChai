@@ -158,13 +158,13 @@ export default function Home() {
         <>
           <div className="h-[100vh] flex justify-center flex-col gap-6 items-center text-white px-5 md:px-0">
             <AnimatedGridPattern />
-            <div className="font-bold flex gap-6 md:gap-5 justify-center items-center md:text-6xl text-4xl z-10">
+            <div className="font-bold flex flex-col-reverse md:flex-row gap-6 md:gap-5 justify-center items-center md:text-6xl text-4xl z-10">
               Buy Me a Chai
               <span>
                 <img src="icons/tea.gif" width="88" alt="" />
               </span>
             </div>
-            <p className="text-center">
+            <p className="text-center text-sm md:text-lg">
               A crowdfunding platform for creators. Get funded by your fans and
               followers. Start now!
             </p>
@@ -190,11 +190,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-white container mx-auto pb-32 pt-32 px-10">
+          <div className="text-white container mx-auto pb-32 md:pt-32 px-10">
             <h2 className="text-3xl font-bold text-center mb-14">
               Your Fans can buy your a Chai
             </h2>
-            <div className="flex gap-5 justify-around">
+            <div className="flex flex-wrap gap-5 justify-around">
               <div className="item space-y-3 flex flex-col items-center justify-center">
                 <MagicCard className="bg-black flex justify-center align-middle items-center flex-col p-10">
                   <img
@@ -247,7 +247,7 @@ export default function Home() {
           </div>
 
             <div className="relative flex h-[500px] w-[80%] m-auto flex-col items-center justify-center overflow-hidden rounded-lg border border-gray-700 bg-black md:shadow-xl">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-black-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
+      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-black-300 bg-clip-text text-center text-4xl md:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
         GetMeAChai!
       </span>
  

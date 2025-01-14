@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
 import { useState } from "react";
 import {RainbowButton} from "@/components/ui/RainbowButton";
+import InteractiveHoverButton from "@/components/ui/InteractiveHoverButton";
 
 const Navbar = () => {
   const [showdropdown, setShowdropdown] = useState(false);
@@ -17,13 +18,13 @@ const Navbar = () => {
   // }
 
   return (
-    <nav className="fixed top-0 w-full text-white flex justify-between items-center px-4 md:h-16 flex-col md:flex-row z-30 backdrop-blur-sm backdrop-filter">
+    <nav className="fixed top-0 w-full text-white flex justify-between items-center px-4 py-4 md:h-16 flex-row z-30 backdrop-blur-sm backdrop-filter">
       <Link
         href={"/"}
         className="logo font-bold flex items-center justify-center"
       >
         <img src="icons/tea.gif" width={44} alt="" />
-        <span className="md:text-xl text-2xl">GetMeAChai!</span>
+        <span className="md:text-xl text-2xl pt-2">GetMeAChai!</span>
       </Link>
 
       <div className="relative">
@@ -35,7 +36,7 @@ const Navbar = () => {
 
         {session && (
           <>
-            <button
+            <RainbowButton
               id="dropdownDefaultButton"
               onClick={() => {
                 setShowdropdown(!showdropdown);
@@ -46,7 +47,7 @@ const Navbar = () => {
                 }, 100);
               }}
               data-dropdown-toggle="dropdown"
-              className=" text-white mx-4  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-3 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className=" text-white mx-4 font-medium rounded-lg text-sm p-3 text-center inline-flex items-center"
               type="button"
             >
               Welcome {session.user.username}
@@ -65,21 +66,21 @@ const Navbar = () => {
                   d="m1 1 4 4 4-4"
                 />
               </svg>
-            </button>
+              </RainbowButton>
             <div
               id="dropdown"
-              className={`z-10 absolute left-14 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 transition-all duration-300 overflow-hidden ${
+              className={`z-10 absolute left-5 border-2 border-gray-600 bg-black divide-y divide-gray-100 rounded-lg shadow w-44 transition-all duration-300 overflow-hidden ${
                 showdropdown ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
               }`}
             >
               <ul
-                className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                className="py-2 text-sm text-gray-100 dark:text-gray-200"
                 aria-labelledby="dropdownDefaultButton"
               >
                 <li>
                   <Link
                     href="/dashboard"
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    className="block px-4 py-2 hover:bg-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
                   >
                     Dashboard
                   </Link>
@@ -87,7 +88,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href={`/${session.user.username}`}
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    className="block px-4 py-2 hover:bg-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
                   >
                     Profile
                   </Link>
@@ -98,8 +99,9 @@ const Navbar = () => {
                     onClick={() => {
                       signOut();
                     }}
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    className="block px-4 py-2 hover:bg-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
                   >
+                    
                     Sign out
                   </Link>
                 </li>
@@ -109,14 +111,13 @@ const Navbar = () => {
         )}
 
         {session && (
-          <button
-            className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+          <InteractiveHoverButton text="Logout"
+            className="dark text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
             onClick={() => {
               signOut();
             }}
           >
-            Logout
-          </button>
+            </InteractiveHoverButton>
         )}
         {!session && (
           <Link href={"/login"}>

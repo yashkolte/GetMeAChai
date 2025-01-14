@@ -133,58 +133,58 @@ const Dashboard = () => {
     return (
         <>
             <ToastContainer />
-            <div className="container mx-auto py-5 px-6 md:px-0">
+            <div className="container mx-auto py-5 px-6 md:px-0 mt-14 md:mt-0">
                 <h1 className='text-center my-5 text-3xl font-bold '>Welcome to Your Dashboard</h1>
 
                 <form className='max-w-2xl mx-auto' onSubmit={handleSave}>
                     <div className='my-2'>
-                        <label htmlFor="name" className='block mb-2 text-sm font-medium text-gray-900 dark:text-white '>Name</label>
-                        <input type="text" value={form.name ? form.name : ""} onChange={handleChange} name='name' id='name' className='block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
+                        <label htmlFor="name" className='block mb-2 text-sm font-medium text-gray-50 dark:text-white '>Name</label>
+                        <input type="text" value={form.name ? form.name : ""} onChange={handleChange} name='name' id='name' className='block w-full p-2 text-gray-50 border border-gray-300 rounded-lg bg-black text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
                     </div>
 
                     <div className="my-2">
-                        <label htmlFor="email" className='block mb-2 text-sm font-medium text-gray-900 dark:text-white '>Email</label>
-                        <input type="text" disabled readOnly value={form.email ? form.email : ""} onChange={handleChange} name='email' id='email' className='block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
+                        <label htmlFor="email" className='block mb-2 text-sm font-medium text-gray-50 dark:text-white '>Email</label>
+                        <input type="text" disabled readOnly value={form.email ? form.email : ""} onChange={handleChange} name='email' id='email' className='block w-full p-2 text-gray-50 border border-gray-300 rounded-lg bg-black text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
                     </div>
 
                     <div className="my-2">
-                        <label htmlFor="username" className='block mb-2 text-sm font-medium text-gray-900 dark:text-white '>Username</label>
-                        <input type="text" value={form.username ? form.username : ""} onChange={handleChange || setChangeInUsername(true)} name='username' id='username' className='block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
+                        <label htmlFor="username" className='block mb-2 text-sm font-medium text-gray-50 dark:text-white '>Username</label>
+                        <input type="text" value={form.username ? form.username : ""} onChange={handleChange || setChangeInUsername(true)} name='username' id='username' className='block w-full p-2 text-gray-50 border border-gray-300 rounded-lg bg-black text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
                     </div>
 
                     <div className="my-2">
-                        <label htmlFor="profilePic" className='block mb-2 text-sm font-medium text-gray-900 dark:text-white '>Profile Picture</label>
-                        <input type="text" value={form.profilePic ? form.profilePic : ""} onChange={handleChange} name='profilePic' id='profilePic' className='block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
+                        <label htmlFor="profilePic" className='block mb-2 text-sm font-medium text-gray-50 dark:text-white '>Profile Picture</label>
+                        <input type="text" value={form.profilePic ? form.profilePic : ""} onChange={handleChange} name='profilePic' id='profilePic' className='block w-full p-2 text-gray-50 border border-gray-300 rounded-lg bg-black text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
                     </div>
 
                     <div className="my-2">
-                        <label htmlFor="coverPic" className='block mb-2 text-sm font-medium text-gray-900 dark:text-white '>Cover Photo</label>
-                        <input type="text" value={form.coverPic ? form.coverPic : ""} onChange={handleChange} name='coverPic' id='coverPic' className='block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
+                        <label htmlFor="coverPic" className='block mb-2 text-sm font-medium text-gray-50 dark:text-white '>Cover Photo</label>
+                        <input type="text" value={form.coverPic ? form.coverPic : ""} onChange={handleChange} name='coverPic' id='coverPic' className='block w-full p-2 text-gray-50 border border-gray-300 rounded-lg bg-black text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
                     </div>
 
                     <div className="my-2">
-                        <label htmlFor="project" className='block mb-2 text-sm font-medium text-gray-900 dark:text-white '>Project</label>
-                        <input type="text" value={form.project ? form.project : ""} onChange={handleChange} name='project' id='project' className='block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
+                        <label htmlFor="project" className='block mb-2 text-sm font-medium text-gray-50 dark:text-white '>Project</label>
+                        <input type="text" value={form.project ? form.project : ""} onChange={handleChange} name='project' id='project' className='block w-full p-2 text-gray-50 border border-gray-300 rounded-lg bg-black text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
                     </div>
 
                     <div className="my-2">
-                        <label htmlFor="projectLink" className='block mb-2 text-sm font-medium text-gray-900 dark:text-white '>Project Link</label>
-                        <input type="text" value={form.projectLink ? form.projectLink : ""} onChange={handleChange} name='projectLink' id='projectLink' className='block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
+                        <label htmlFor="projectLink" className='block mb-2 text-sm font-medium text-gray-50 dark:text-white '>Project Link</label>
+                        <input type="text" value={form.projectLink ? form.projectLink : ""} onChange={handleChange} name='projectLink' id='projectLink' className='block w-full p-2 text-gray-50 border border-gray-300 rounded-lg bg-black text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
                     </div>
 
                     <div className="my-2">
-                        <label htmlFor="projectDescription" className='block mb-2 text-sm font-medium text-gray-900 dark:text-white '>Project Description</label>
-                        <textarea type="text" value={form.projectDescription ? form.projectDescription : ""} onChange={handleChange} onInput={handleInput} name='projectDescription' id='projectDescription' className='block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
+                        <label htmlFor="projectDescription" className='block mb-2 text-sm font-medium text-gray-50 dark:text-white '>Project Description</label>
+                        <textarea type="text" value={form.projectDescription ? form.projectDescription : ""} onChange={handleChange} onInput={handleInput} name='projectDescription' id='projectDescription' className='block w-full p-2 text-gray-50 border border-gray-300 rounded-lg bg-black text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
                     </div>
 
                     <div className="my-2">
-                        <label htmlFor="razrpayId" className='block mb-2 text-sm font-medium text-gray-900 dark:text-white '>RazorPay Id</label>
-                        <input type="text" value={form.razrpayId ? form.razrpayId : ""} onChange={handleChange} name='razrpayId' id='razrpayId' className='block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
+                        <label htmlFor="razrpayId" className='block mb-2 text-sm font-medium text-gray-50 dark:text-white '>RazorPay Id</label>
+                        <input type="text" value={form.razrpayId ? form.razrpayId : ""} onChange={handleChange} name='razrpayId' id='razrpayId' className='block w-full p-2 text-gray-50 border border-gray-300 rounded-lg bg-black text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
                     </div>
 
                     <div className="my-2">
-                        <label htmlFor="razrpaySecret" className='block mb-2 text-sm font-medium text-gray-900 dark:text-white '>RazorPay Secret</label>
-                        <input type="password" value={form.razrpaySecret ? form.razrpaySecret : ""} onChange={handleChange} name='razrpaySecret' id='razrpaySecret' className='block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
+                        <label htmlFor="razrpaySecret" className='block mb-2 text-sm font-medium text-gray-50 dark:text-white '>RazorPay Secret</label>
+                        <input type="password" value={form.razrpaySecret ? form.razrpaySecret : ""} onChange={handleChange} name='razrpaySecret' id='razrpaySecret' className='block w-full p-2 text-gray-50 border border-gray-300 rounded-lg bg-black text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ' />
                     </div>
 
                     <div className="my-6 flex justify-center items-center">

@@ -43,7 +43,7 @@ const ProfilesPage = () => {
   }, [searchTerm]);
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 mt-12">
       <header className="text-center mb-8">
         <h1 className="text-4xl font-bold">Top Profiles</h1>
       </header>

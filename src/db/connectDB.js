@@ -4,17 +4,33 @@ const connection = {};
 
 async function dbConnect() {
     if (connection.isConnected) {
-        // console.log("Already connected to DB");
+        // Connection already established, no need to reconnect
         return;
     }
 
     try {
-        const db = await mongoose.connect(process.env.MONGODB_URI || '', {});
+        // Check if we are in development mode or production
+        if (mongoose.connections.length > 0) {
+            connection.isConnected = mongoose.connections[0].readyState;
+            if (connection.isConnected) {
+                // Already connected to DB, no need to reconnect
+                return;
+            }
+        }
+
+        // If no connection exists or in serverless environments, establish a new connection
+        const db = await mongoose.connect(process.env.MONGODB_URI || '', {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useFindAndModify: false,
+            useCreateIndex: true
+        });
+
+        // Store the connection state to avoid future reconnections
         connection.isConnected = db.connections[0].readyState;
-        // console.log('Success: Connected to MongoDB');
     } catch (error) {
-        console.log("Error connecting to the database", error);
-        process.exit(1);
+        console.error("Error connecting to the database", error);
+        process.exit(1); // Exit the process in case of critical error
     }
 }
 
