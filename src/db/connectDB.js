@@ -17,18 +17,15 @@ async function dbConnect() {
             }
         }
 
-        // Connect to MongoDB
-        const db = await mongoose.connect(process.env.MONGODB_URI || '', {
-            useNewUrlParser: true,   // Added for modern MongoDB drivers
-            useUnifiedTopology: true, // Use newer server discovery and monitoring
-        });
+        // Connect to MongoDB without deprecated options
+        const db = await mongoose.connect(process.env.MONGODB_URI || '');
 
         // Store connection state
         connection.isConnected = db.connections[0].readyState;
 
     } catch (error) {
         console.error("Error connecting to the database", error);
-        process.exit(1);
+        process.exit(1); // Exit the process in case of critical error
     }
 }
 
