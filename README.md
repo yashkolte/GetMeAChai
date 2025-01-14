@@ -8,8 +8,16 @@ The platform features a streamlined dashboard where developers can showcase thei
 ---
 
 ## Tech Stack
-- **Next.js** with **TailwindCSS** for a responsive and visually appealing UI.
+- **Next.js** for server-side rendering and routing. 
+- **TailwindCSS** for responsive styling and design.
 - **MongoDB** for robust database management.
+- **Node.js** for server-side logic and API integration.
+- **Razorpay** for secure payment processing.
+- **React** for building the frontend application.
+- **NextAuth** for authentication and user management.
+- **Vercel** for deployment and hosting.
+- **MagicUI** for a clean and intuitive user interface.
+
 
 ---
 
