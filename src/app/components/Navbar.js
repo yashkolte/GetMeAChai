@@ -20,7 +20,8 @@ const Navbar = () => {
         <span className="md:text-xl text-2xl pt-2">GetMeAChai!</span>
       </Link>
 
-      <div className="relative flex flex-col-reverse flex-row align-middle justify-center">
+      <div className="relative">
+
 
         {session && (
           <>
@@ -35,7 +36,7 @@ const Navbar = () => {
                 }, 100);
               }}
               data-dropdown-toggle="dropdown"
-              className=" text-white md:mx-4 font-medium rounded-lg text-sm p-3 text-center inline-flex items-center"
+              className=" text-white mx-4 font-medium rounded-lg text-sm p-3 text-center inline-flex items-center"
               type="button"
             >
               Welcome {session.user.username}
@@ -57,7 +58,7 @@ const Navbar = () => {
               </RainbowButton>
             <div
               id="dropdown"
-              className={`z-10 absolute md:left-5 top-full border-2 border-gray-600 bg-black divide-y divide-gray-100 rounded-lg shadow w-44 transition-all duration-300 overflow-hidden ${
+              className={`z-10 absolute left-5 border-2 border-gray-600 bg-black divide-y divide-gray-100 rounded-lg shadow w-44 transition-all duration-300 overflow-hidden ${
                 showdropdown ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
               }`}
             >
@@ -100,7 +101,7 @@ const Navbar = () => {
 
         {session && (
           <InteractiveHoverButton text="Logout"
-            className="dark hidden md:flex text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center md:me-2 md:mb-2"
+            className="dark hidden md:inline text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
             onClick={() => {
               signOut();
             }}

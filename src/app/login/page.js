@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react'
 import { useSession, signIn } from "next-auth/react"
 import { useRouter } from 'next/navigation'
-import { ToastContainer, toast, Slide } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 const Login = () => {
     const { data: session } = useSession()

@@ -133,7 +133,7 @@ const Dashboard = () => {
     return (
         <>
             <ToastContainer />
-            <div className="container mx-auto py-5 px-6 md:px-0 mt-14 md:mt-0">
+            <div className="container mx-auto py-5 px-6 md:px-0 mt-14 md:mt-4">
                 <h1 className='text-center my-5 text-3xl font-bold '>Welcome to Your Dashboard</h1>
 
                 <form className='max-w-2xl mx-auto' onSubmit={handleSave}>
